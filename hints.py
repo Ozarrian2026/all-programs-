@@ -34,6 +34,7 @@ print(guessList)
 guessList[3] = "z"
 
 print(guessList)
+
 # timer for hangman
 #boom = 10
 #while boom > 0:
@@ -58,3 +59,53 @@ else:
 
 print("Misses: " + str(misses))
 print(hangman[misses])
+
+# how to replace the under score's with letters
+
+mystery = "halloween"
+mystery = list(mystery)
+
+myGuess = "_________"
+myGuess = list(myGuess)
+
+guess1 = input("Guess a letter: ")
+
+if guess1 in mystery:
+	count = 0
+	for letter in mystery:
+		if letter == guess1:
+			myGuess[count] = guess1
+		count += 1
+
+print(myGuess)
+
+
+
+
+
+
+
+
+
+
+
+
+# hints for FizzBuzz
+myNum = int(input("Enter a number to check: "))
+
+print("Checking if your number is a multiple of 3")
+
+# % gives remainders
+# Check if the remainder is zero
+
+if myNum % 3 == 0:
+	print("your number is a multiple of 3")
+
+# Check if number is a multiple of 5
+
+if myNum % 5 == 0:
+	print("your number is a multiple of 5")
+
+# How to print on the same line
+print(str(myNum), end="")
+print(" something else")

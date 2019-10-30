@@ -53,62 +53,76 @@ word = list(word)
 print("Welcome to Hangman!")
 guessList = []
 missed = []
+guessedLetters = []
 for letter in word:
 	guessList.append("_")
 print(guessList)
 
 while True:
-	guess = input("Guess a letter: ")
-	if guess == "m":
+	letter = input("Guess a letter: ")
+	if letter == "m":
 		guessList[0] = "m"
+		print( )
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print( )
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-	elif guess == "i":
+	elif letter == "i":
 		guessList[1] = "i"
+		print("Thats a letter")
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		print(ASCII)
-	elif guess == "n":
+	elif letter == "n":
 		guessList[2] = "n"
+		print("Thats a letter")
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		print(ASCII)
-	elif guess == "e":
+	elif letter == "e":
 		guessList[3] = "e"
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		print(ASCII)
-	elif guess == "c":
+	elif letter == "c":
 		guessList[4] = "c"
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		print(ASCII)
-	elif guess == "r":
+	elif letter == "r":
 		guessList[5] = "r"
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		print(ASCII)
-	elif guess == "a":
+	elif letter == "a":
 		guessList[6] = "a"
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		
-	elif guess == "f":
+	elif letter == "f":
 		guessList[7] = "f"
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		
-	elif guess == "t":
+	elif letter == "t":
 		guessList[8] = "t"
+		print("Thats a letter")
+		guessedLetters.append(letter)
+		print("Guessed Letters" + str(guessedLetters))
 		print(guessList)
-		print("There is that letter in this word")
-		
+	if guessList == word:
+		print("You win")
+		break
+	
 	else:
-		print(ASCII[1])
-		print("That is not a letter in the word")
-		print("Try again")
+		print("That is not a letter, try again")
+		missed.append(letter)
+		print("These are the letters that you guessed so far" + str(guessedLetters))
+		print(missed)
+		print(ASCII[len(missed)])
 		print(guessList)
 
-
-
-print(ASCII)
